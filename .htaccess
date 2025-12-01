@@ -1,0 +1,90 @@
+
+# aProtect the .htaccess
+<files .htaccess="">
+order allow,deny
+deny from all
+</files>
+
+#php_value upload_max_filesize 50000M
+#php_value post_max_size 50000M
+#php_value max_execution_time 200
+#php_value max_input_time 200
+
+RewriteEngine on
+RewriteRule ^simtaru-([blora]+)$ landing/home.php [L]
+RewriteRule ^simtaru-([itr_blora]+)$ landing/map.php [L]
+RewriteRule ^simtaru-([peta_permohonan]+)$ landing/peta_kttr.php [L]
+RewriteRule ^simtaru-([p3t4_p3rm0h0n4n]+)$ landing/peta_pemohon.php [L]
+RewriteRule ^simtaru-([peta_us4h4]+)$ landing/peta_kttr_usaha.php [L]
+RewriteRule ^simtaru-([persyaratan_blora]+)$ landing/persyaratan.php [L]
+RewriteRule ^simtaru-([offline_blora]+)$ landing/offline.php [L]
+RewriteRule ^simtaru-([permohonan_online_blora]+)$ landing/online.php [L]
+RewriteRule ^simtaru-([daftarhasil]+)$ landing/daftardatahasil.php [L]
+RewriteRule ^simtaru-([permohonan_user]+)$ landing/permohonan_user.php [L]
+RewriteRule ^simtaru-([edit_pemohonan]+)$ landing/edit_pemohonan_user.php [L]
+
+RewriteRule ^simtaru-([m0h0n_kppr_admin]+)$ landing/permohonan_nonusaha_admin.php [L]
+RewriteRule ^simtaru-([permohonan_kppr]+)$ landing/permohonan_nonusaha.php [L]
+RewriteRule ^simtaru-([daftarhasil_kppr]+)$ landing/daftardatahasil_kppr.php [L]
+RewriteRule ^simtaru-([edit_pemohonan_kppr]+)$ landing/edit_pemohonan_kppr_non.php [L]
+
+RewriteRule ^simtaru-([admin_kpprusaha]+)$ landing/permohonan_usaha_admin.php [L]
+RewriteRule ^simtaru-([permohonan_usaha_kppr]+)$ landing/permohonan_usaha.php [L]
+RewriteRule ^simtaru-([daftarhasil_usaha_kppr]+)$ landing/daftardatahasil_usaha_kppr.php [L]
+RewriteRule ^simtaru-([edit_pemohonan_usaha]+)$ landing/edit_pemohonan_usaha.php [L]
+
+RewriteRule ^simtaru-([adminlogin]+)$ processed/001dologin.php [L]
+RewriteRule ^simtaru-([logoutblora]+)$ landing/logout.php [L]
+RewriteRule ^simtaru-([updateprofile]+)$ processed/000updateprofile.php [L]
+
+RewriteRule ^simtaru-([dashboard]+)$ landing/dashboard.php [L]
+RewriteRule ^simtaru-([tambahdata]+)$ landing/tambahdata.php [L]
+RewriteRule ^simtaru-([daftardatapermohonan]+)$ landing/daftardatapermohonan.php [L]
+RewriteRule ^simtaru-([d4t4nnonkkpr]+)$ landing/daftardatapermohonannon.php [L]
+RewriteRule ^simtaru-([t4b3lkkpr]+)$ landing/daftardatapermohonanusaha.php [L]
+RewriteRule ^simtaru-([gis]+)$ landing/map.php [L]
+RewriteRule ^simtaru-([p3tag1s]+)$ landing/mapadmin.php [L]
+RewriteRule ^simtaru-([simpandatapermohonan]+)$ processed/002updatesurvei.php [L]
+
+RewriteRule ^simtaru-([hapusdata]+)$ processed/003hapussurvei.php [L]
+RewriteRule ^simtaru-([simpanhasilpermohonan]+)$ processed/004hasilpermohonan.php [L]
+RewriteRule ^simtaru-([savenonkkprpermohonan]+)$ processed/007hasilnonkkprpermohonan.php [L]
+RewriteRule ^simtaru-([034savekkprpermohonan]+)$ processed/010hasilkkprpermohonan.php [L]
+
+RewriteRule ^simtaru-([02hapususaha]+)$ processed/009hapusdatkkpr.php [L]
+RewriteRule ^simtaru-([deletednonusaha]+)$ processed/006hapusdatnonkkpr.php [L]
+RewriteRule ^simtaru-([simpan111111]+)$ processed/008updatesurveinon.php [L]
+RewriteRule ^simtaru-([212]+)$ processed/011updatesurveiusaha.php [L]
+
+RewriteRule ^simtaru-([daftardataperuntukkan]+)$ landing/daftardataperuntukkan.php [L]
+RewriteRule ^simtaru-([f1leunduh]+)$ landing/unduh.php [L]
+RewriteRule ^simtaru-([4du4nm4sy]+)$ landing/aduan.php [L]
+
+RewriteRule ^simtaru-([adminregister]+)$ processed/005register.php [L]
+
+RewriteRule ^simtaru-([d4shumum]+)$ landing/homeumum.php [L]
+RewriteRule ^simtaru-([Print_itr]+)$ landing/cetak1.php [L]
+RewriteRule ^simtaru-([Print_kppr_non]+)$ landing/cetak2.php [L]
+RewriteRule ^simtaru-([Print_kppr_usaha]+)$ landing/cetak3.php [L]
+
+
+RewriteRule ^simtaru-([cetakpdf]+)$ pdf/examples/cetakhasil.php [L]
+RewriteRule ^simtaru-([tteFPR]+)$ pdf/examples/cetakhasilttefpr.php [L]
+RewriteRule ^simtaru-([c3takpdf]+)$ pdf/examples/cetakhasila.php [L]
+RewriteRule ^simtaru-([c3t4k_tte]+)$ pdf/examples/cetakhasiltte.php [L]
+RewriteRule ^simtaru-([cetakpdfusaha]+)$ pdf/examples/cetakhasilusaha.php [L]
+
+
+RewriteRule ^simtaru-([d4shfpr]+)$ landing/dashboardfpr.php [L]
+RewriteRule ^simtaru-([fprd4t4nnonkkpr]+)$ landing/daftardatapermohonannonfpr.php [L]
+RewriteRule ^simtaru-([us3rfpr]+)$ landing/userfpr.php [L]
+RewriteRule ^simtaru-([999999]+)$ processed/012updatehasilfpr.php [L]
+RewriteRule ^simtaru-([upd4t3pr0f1l3FPR]+)$ processed/013updateprofilefpr.php [L]
+
+
+RewriteRule ^warning-([error]+)$ error.php [L]
+
+Options All -Indexes
+
+
+Options All -Indexes
