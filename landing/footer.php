@@ -38,8 +38,5 @@
 			</script> <a href="https://dpupr.blorakab.go.id/" target="_blank">Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Blora</a></strong> All rights
 			reserved.</p>
 		<!-- Back to top button -->
-		<button type="button" class="btn btn-primary btn-floating btn-sm" id="btn-back-to-top" data-toggle="tooltip" data-placement="top" title="Kembali Ke Atas">
-			<i class="fa fa-sort-up"></i>
-		</button>
 	</center>
 </footer>

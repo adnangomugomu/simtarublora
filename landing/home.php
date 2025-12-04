@@ -55,10 +55,10 @@ $result = mysqli_query($link, $sql);
 	<link href="css/introjs.css" rel="stylesheet">
 
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 		body {
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Poppins', sans-serif;
 			font-weight: 400;
 			font-size: 12px;
 		}
@@ -69,13 +69,11 @@ $result = mysqli_query($link, $sql);
 		h4,
 		h5,
 		h6 {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 700;
 			font-size: 12px;
 		}
 
 		.button {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 700;
 			font-size: 13px;
 			text-transform: uppercase;
@@ -83,66 +81,55 @@ $result = mysqli_query($link, $sql);
 
 
 		input {
-			font-family: 'Roboto', sans-serif;
 			font-size: 12px;
 		}
 
 
 		nav.navbar li a {
-			font-family: 'Roboto', sans-serif;
 			font-size: 12px;
 		}
 
 		p {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		div {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		button {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		.select2-selection__rendered {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		.select2-search {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		.select2-search input {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		.select2-results {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		.select2-results__option--highlighted {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
 
 		.select2-results__option[aria-selected=true] {
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
@@ -340,7 +327,6 @@ $result = mysqli_query($link, $sql);
 			box-sizing: border-box;
 			border: 1px solid #ccc;
 			border-radius: 10px;
-			font-family: 'Roboto', sans-serif;
 			font-weight: 300;
 			font-size: 12px;
 		}
@@ -352,7 +338,7 @@ $result = mysqli_query($link, $sql);
 
 		.body_container {
 			min-height: 100vh;
-			background-color: #ecf0f5;
+			/* background-color: #ecf0f5; */
 			display: flex;
 			flex-direction: column;
 		}
@@ -407,7 +393,7 @@ $result = mysqli_query($link, $sql);
 		}
 
 		.btn_custom {
-			margin-top: -8px;
+			margin-top: -4px;
 			text-transform: capitalize;
 			padding: 5px 20px;
 			transition: all 0.3s ease;
@@ -418,12 +404,19 @@ $result = mysqli_query($link, $sql);
 			background-color: #008000;
 			color: #ffffff;
 		}
+
+		.bg_new {
+			background-image: url('backoffice/bg-2.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
 	</style>
 </head>
 
-<body>
+<body class="bg_new">
 
-	<div id="costumModalpilihan" class="modal" data-easein="flipBounceXIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	<div id="costumModalpilihan" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">
@@ -514,7 +507,7 @@ $result = mysqli_query($link, $sql);
 				<div>
 					<img class="gambar_ikon" src="images/kontak.png" alt="Responsive image" onclick="offline();" title="Kontak Kami" />
 				</div>
-				<button type="button" class="btn btn_custom" title="Kontak Kami" onclick="offline();">layanan kontak kami</button>
+				<button type="button" class="btn btn_custom" title="Kontak Kami" onclick="offline();">layanan kontak</button>
 			</div>
 			<div class="icon_container">
 				<div>
@@ -527,7 +520,7 @@ $result = mysqli_query($link, $sql);
 		<?php include 'footer.php'; ?>
 	</section>
 
-	<div id="costumModalprofile" class="modal" data-easein="flipBounceXIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	<div id="costumModalprofile" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">
@@ -628,7 +621,7 @@ $result = mysqli_query($link, $sql);
 		</div>
 	</div>
 
-	<div id="costumModallogin" class="modal" data-easein="flipBounceXIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	<div id="costumModallogin" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">
@@ -745,7 +738,7 @@ $result = mysqli_query($link, $sql);
 		</div>
 	</div>
 
-	<div id="costumModaladuan" class="modal" data-easein="flipBounceXIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	<div id="costumModaladuan" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">

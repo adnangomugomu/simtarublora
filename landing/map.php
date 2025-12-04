@@ -332,10 +332,11 @@ check_injection();
 		<div style="height: 95%;overflow: auto;margin-bottom: 10px;">
 			<div class="nav-tabs-custom" style="margin-bottom: 0 !important;">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#activity" data-toggle="tab">Layer</a></li>
+					<li class="active"><a id="target_layer" href="#activity" data-toggle="tab">Layer</a></li>
 					<li><a href="#layerlain" data-toggle="tab">Layer Terkait</a></li>
 					<li style="display: none;"><a href="#timeline" data-toggle="tab">Pencarian</a></li>
 					<li><a href="#settings" data-toggle="tab">Setting</a></li>
+					<li><a href="#base_map" id="target_base_map" data-toggle="tab">Base Map</a></li>
 				</ul>
 				<div class="tab-content">
 					<div class="active tab-pane" id="activity">
@@ -423,10 +424,36 @@ check_injection();
 						<ol id="measureOutput" reversed style="color:#333333;display:block;"></ol>
 						</p>
 					</div>
+					<div class="tab-pane" id="base_map">
+						<div class="radio">
+							<label style="display: flex;align-items: center;">
+								<input type="radio" name="optionsRadios" id="radio1" value="1" style="margin-right: 5px;margin-bottom: 4px;">
+								<div style="line-height: 0;">Google Map (ROADMAP)</div>
+							</label>
+						</div>
+						<div class="radio">
+							<label style="display: flex;align-items: center;">
+								<input type="radio" name="optionsRadios" id="radio6" value="6" style="margin-right: 5px;margin-bottom: 4px;">
+								<div style="line-height: 0;">Google Map (Hybrid)</div>
+							</label>
+						</div>
+						<div class="radio">
+							<label style="display: flex;align-items: center;">
+								<input type="radio" name="optionsRadios" id="radio2" checked="checked" value="2" style="margin-right: 5px;margin-bottom: 4px;">
+								<div style="line-height: 0;">MapQuest OSM</div>
+							</label>
+						</div>
+						<div class="radio">
+							<label style="display: flex;align-items: center;">
+								<input type="radio" name="optionsRadios" id="radio4" value="4" style="margin-right: 5px;margin-bottom: 4px;">
+								<div style="line-height: 0;">Esri</div>
+							</label>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<button type="button" onclick="show_layer();" class="btn btn-block btn-success btn-sm">Tutup</button>
+		<button type="button" onclick="hide_layer();" class="btn btn-block btn-success btn-sm">Tutup</button>
 	</div>
 
 	<div class="wrapper">
@@ -434,10 +461,8 @@ check_injection();
 		<div class="content-wrapper" style="min-height: 0px !important;">
 
 			<!-- Modal -->
-			<div class="modal fade" id="myModalBaseMap" role="modal" style="background: rgba(0, 0, 0, 0);" data-backdrop="static" data-keyboard="false">
+			<!-- <div class="modal fade" id="myModalBaseMap" role="modal" style="background: rgba(0, 0, 0, 0);" data-backdrop="static" data-keyboard="false">
 				<div class="modal-dialog">
-
-					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header" style="background-color:#006600;color:#FFFFFF;">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -476,7 +501,7 @@ check_injection();
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 			<!-- Modal -->
@@ -725,7 +750,7 @@ check_injection();
 					document.getElementById("divLoading").style.display = "block";
 
 				},
-				success: function(result) {										
+				success: function(result) {
 					$("#divMainLayer").html(result);
 					processLogin();
 					document.getElementById("divLoading").style.display = "none";
@@ -824,7 +849,7 @@ check_injection();
 
 		}
 
-		function addMainLayerMap_Label(mytable, mytampil, mysource) {			
+		function addMainLayerMap_Label(mytable, mytampil, mysource) {
 			popup.hide();
 			$.ajax({
 				type: "GET",
@@ -1854,7 +1879,12 @@ check_injection();
 		}
 
 		function basemap() {
-			$('#myModalBaseMap').modal('show');
+			// $('#myModalBaseMap').modal('show');
+			const sidebar = document.getElementById("sidebar_layer");
+			if (sidebar.classList.contains("tarik_kanan")) {
+				sidebar.classList.remove("tarik_kanan");
+			}
+			$('#target_base_map').trigger('click');
 		}
 
 		function layerku() {
@@ -1863,7 +1893,15 @@ check_injection();
 
 		function show_layer() {
 			const sidebar = document.getElementById("sidebar_layer");
-			sidebar.classList.toggle("tarik_kanan");
+			if (sidebar.classList.contains("tarik_kanan")) {
+				sidebar.classList.remove("tarik_kanan");
+			}
+			$('#target_layer').trigger('click');
+		}
+
+		function hide_layer() {
+			const sidebar = document.getElementById("sidebar_layer");
+			sidebar.classList.add("tarik_kanan");
 		}
 	</script>
 
