@@ -411,6 +411,13 @@ $result = mysqli_query($link, $sql);
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 		}
+
+		input.rounded,
+		textarea.rounded {
+			border-radius: 5px !important;
+			padding: 10px 10px !important;
+			margin-bottom: 15px !important;
+		}
 	</style>
 </head>
 
@@ -420,41 +427,39 @@ $result = mysqli_query($link, $sql);
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">
-					<h1 class="modal-title">
+					<div class="modal-title">
 						<center>
-							<div class="wellcome-heading wow bounceIn">
-								<img src="images/logo.png" height="50"><br><br>
-							</div>
-							<span style="color:#FFFFFF;">Penjelasan Dan Ketentuan <?php echo $judulWeb; ?></span>
+							<img src="images/logo.png" width="100">
+							<div style="color:#FFFFFF;font-weight: 600;margin-top: 15px;">Penjelasan Dan Ketentuan <?php echo $judulWeb; ?></div>
 						</center>
-					</h1>
+					</div>
 				</div>
 				<div class="modal-body">
 					<div class="row" style="padding:15px;">
 						<p align="justify">
-						<div align="justify" style="font-size:12px;color:#7b7877;">
+						<div align="justify">
 							<strong>TEMATA </strong>Blora (Sistem Informasi Tata Ruang Kabupaten Blora) merupakan layanan dan sistem informasi manajemen (alat kerja) yang mempunyai utilitas layanan permohonan dokumen kajian PKKPR Nonberusaha secara online beserta lokasi - lokasi spasial yang ada di Kabupaten Blora dibawah kewenangan DPUPR Kabupaten Blora.
 						</div>
 						<br>
-						<div align="justify" style="font-size:12px;color:#7b7877;">
+						<div align="justify">
 							Data yang ada di <strong>TEMATA </strong>Blora (Sistem Informasi Tata Ruang Kabupaten Blora) merupakan data yang sudah menjadi produk hukum (PP, Perpres, Perda Provinsi, Perda Kabupaten Kota).
 						</div>
 						<br>
-						<div align="justify" style="font-size:12px;color:#7b7877;">
+						<div align="justify">
 							DPUPR Kabupaten Blora tidak bertanggungjawab atas segala kesalahan atau kerugian yang timbul karena tindakan yang berkaitan dengan penggunaan data/informasi yang disajikan pada <strong>TEMATA </strong>Blora (Sistem Informasi Tata Ruang Kabupaten Blora).
 						</div>
 						<br>
-						<div align="justify" style="font-size:12px;color:#7b7877;">
+						<div align="justify">
 							DPUPR Kabupaten Blora tidak bertanggungjawab atas data/informasi yang disampaikan oleh pihak ketiga yang menggunakan utilitas pada <strong>TEMATA </strong>Blora (Sistem Informasi Tata Ruang Kabupaten Blora) dan berlaku sebaliknya.
 						</div>
 						<br>
-						<div align="justify" style="font-size:12px;color:#7b7877;">
+						<div align="justify">
 							Bagi pengguna yang ingin mengajukan permohonan dokumen kajian PKKPR Nonberusaha secara online mohon login atau registrasi dahulu.
 						</div>
 						<br>
 						<center>
-							<input type="checkbox" id="setuju" name="setuju" value="setuju" style="color:#990000;" onClick="setuju(this.checked)">
-							<label for="setuju" style="color:#7b7877;font-size:12px;"> Saya mengerti dan menyetujui penjelasan dan ketentuan diatas.</label>
+							<input type="checkbox" id="setuju" name="setuju" value="setuju" onClick="setuju(this.checked)">
+							<label for="setuju"> Saya mengerti dan menyetujui penjelasan dan ketentuan diatas.</label>
 						</center>
 						</p>
 					</div>
@@ -469,7 +474,7 @@ $result = mysqli_query($link, $sql);
 	</div>
 
 	<div id="divLoading"></div>
-
+	<?php include 'headerumum.php'; ?>
 	<section class="body_container">
 
 		<div class="text-center header_container">
@@ -625,12 +630,12 @@ $result = mysqli_query($link, $sql);
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">
-					<h1 class="modal-title">
+					<div class="modal-title">
 						<center>
-							<img src="images/login.png" height="50"><br>
-							<span style="color:#FFFFFF;">Login Sistem Informasi Tata Ruang Kabupaten Blora</span>
+							<img src="images/login.png" width="100"><br>
+							<div style="color:#FFFFFF;font-weight: 600;">Login Sistem Informasi Tata Ruang Kabupaten Blora</div>
 						</center>
-					</h1>
+					</div>
 				</div>
 				<div class="modal-body">
 					<div class="nav-tabs-custom">
@@ -742,54 +747,52 @@ $result = mysqli_query($link, $sql);
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color:#00a65a;">
-					<h1 class="modal-title">
+					<div class="modal-title">
 						<center>
-							<img src="images/pengaduanmasy.png" height="50"><br>
-							<span style="color:#FFFFFF;">Layanan Aduan Sistem Informasi Tata Ruang Kabupaten Blora</span>
+							<img src="images/pengaduanmasy.png" width="100">
+							<div style="color:#FFFFFF;font-weight: 600;">Layanan Aduan Sistem Informasi Tata Ruang Kabupaten Blora</div>
 						</center>
-					</h1>
+					</div>
 				</div>
 				<div class="modal-body">
-					<p>
 					<div class="row clearfix">
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 form-control-label">
 							<label for="username">Nama</label>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
-							<input type="text" name="namapemohonaduan" class="rounded" id="namapemohonaduan" placeholder="Nama " data-toggle="tooltip" data-placement="top" title="Masukkan Nama " required>
+							<input autocomplete="off" type="text" name="namapemohonaduan" class="rounded" id="namapemohonaduan" placeholder="Nama " data-toggle="tooltip" data-placement="top" title="Masukkan Nama " required>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 form-control-label">
 							<label for="username">Nomor Identitas</label>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
-							<input type="text" name="noidentitaspemohonaduan" class="rounded" id="noidentitaspemohonaduan" placeholder="Nomor Identitas " data-toggle="tooltip" data-placement="top" title="Masukkan Nomor Identitas " required>
+							<input autocomplete="off" type="text" name="noidentitaspemohonaduan" class="rounded" id="noidentitaspemohonaduan" placeholder="Nomor Identitas " data-toggle="tooltip" data-placement="top" title="Masukkan Nomor Identitas " required>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 form-control-label">
 							<label for="username">Nomor HP </label>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
-							<input type="text" name="notelpidentitaspemohonaduan" class="rounded" id="notelpidentitaspemohonaduan" placeholder="Nomor HP " data-toggle="tooltip" data-placement="top" title="Masukkan Nomor HP " required>
+							<input autocomplete="off" type="text" name="notelpidentitaspemohonaduan" class="rounded" id="notelpidentitaspemohonaduan" placeholder="Nomor HP " data-toggle="tooltip" data-placement="top" title="Masukkan Nomor HP " required>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 form-control-label">
 							<label for="username">Aduan</label>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
-							<textarea class="rounded" rows="4" name="alamatpemohonaduan" id="alamatpemohonaduan" data-toggle="tooltip" data-placement="top" title="Masukkan Isi Aduan " placeholder="Masukkan Isi Aduan" required></textarea>
+							<textarea autocomplete="off" class="rounded" rows="4" name="alamatpemohonaduan" id="alamatpemohonaduan" data-toggle="tooltip" data-placement="top" title="Masukkan Isi Aduan " placeholder="Masukkan Isi Aduan" required></textarea>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 form-control-label">
 							<label for="username">CAPTCHA</label>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
-							<input type="text" name="capsam" class="rounded" id="capsam" placeholder="CAPTCHA" data-toggle="tooltip" data-placement="top" title="CAPTCHA" disabled="disabled" value="ERD1C" style="background-color:#CCCCCC;" required>
+							<input autocomplete="off" type="text" name="capsam" class="rounded" id="capsam" placeholder="CAPTCHA" data-toggle="tooltip" data-placement="top" title="CAPTCHA" disabled="disabled" value="KSN765S" style="background-color:#CCCCCC;" required>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 form-control-label">
 							<label for="username">Masukkan CAPTCHA</label>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
-							<input type="text" name="isicapcha" class="rounded" id="isicapcha" placeholder="CAPTCHA " data-toggle="tooltip" data-placement="top" title="Masukkan CAPTCHA" onchange="cekcapca(this.value)" onkeypress="cekcapca(this.value)" onkeyup="cekcapca(this.value)" required>
+							<input autocomplete="off" type="text" name="isicapcha" class="rounded" id="isicapcha" placeholder="CAPTCHA " data-toggle="tooltip" data-placement="top" title="Masukkan CAPTCHA" onchange="cekcapca(this.value)" onkeypress="cekcapca(this.value)" onkeyup="cekcapca(this.value)" required>
 						</div>
 					</div>
-					</p>
 					<button type="submit" class="btn btn-sm btn btn-primary" data-toggle="tooltip" data-placement="top" title="Register User" style="width:100px;background-color:#ee102a;border:#00a65a;" id="kirimmohon" disabled="disabled" onclick="simpanmasukan()"><i class="fa fa-save"></i> Kirim</button>
 					<button type="button" class="btn btn-sm btn btn-warning" data-toggle="tooltip" data-placement="top" title="Batalkan Register" style="width:100px;background-color:#f3c951;border:#f3c951;" data-dismiss="modal" aria-hidden="true"><i class="fa fa-reply"></i> Batal</button>
 				</div>

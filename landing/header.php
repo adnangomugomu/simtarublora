@@ -440,7 +440,7 @@ $para18 = strpos($parts, "simtaru-us3rfpr");
 								<li><a href="simtaru-d4t4nnonkkpr">2. Daftar Data Permohonan Kesesuaian Kegiatan Penataan Ruang (KKPR)</a></li>
 							</ul>
 						</li>
-						<li class="<?php if ($para10) { ?> active <?php } ?>"><a href="simtaru-p3tag1s">PETA SIG</a></li>
+						<li class="<?php if ($para10) { ?> active <?php } ?>"><a href="simtaru-itr_blora">PETA SIG</a></li>
 						<li class="<?php if ($para17) { ?> active <?php } ?>"><a href="simtaru-4du4nm4sy">ADUAN</a></li>
 						<li>
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">SETTING PETA <span class="caret"></span></a>

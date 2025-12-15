@@ -632,7 +632,7 @@ if ($proses == '1') {
 											<?php
 											if ($ikonku <> "") {
 											?>
-												<a href="images/<?php echo $ikonku; ?>" target="_blank"><?php echo $ikonku; ?></a>
+												<a href="upload/<?php echo $ikonku; ?>" target="_blank"><?php echo $ikonku; ?></a>
 											<?php
 											}
 											?>
