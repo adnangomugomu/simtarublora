@@ -657,8 +657,8 @@ a {
 	</section>
 
 </body>
-	<script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="../plugins/jQuery/jQuery-2.1.3.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 <?php 
 if ($_GET['nomor'])
 {
