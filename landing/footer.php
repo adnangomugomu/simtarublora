@@ -1,13 +1,21 @@
+<style>
+	#btn-back-to-top {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		display: none;
+	}
+
+	@media only screen and (max-width: 375px) {
+		.main-footer {
+			position: fixed;
+			bottom: 0;
+		}
+	}
+</style>
+
 <footer class="main-footer">
 	<center>
-		<style>
-			#btn-back-to-top {
-				position: fixed;
-				bottom: 10px;
-				right: 10px;
-				display: none;
-			}
-		</style>
 		<p class="text-center">
 			<?php
 			$sql = "select count(id) as jumlah from si_visitor where DATE(tanggal) = CURDATE()";

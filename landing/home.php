@@ -418,6 +418,40 @@ $result = mysqli_query($link, $sql);
 			padding: 10px 10px !important;
 			margin-bottom: 15px !important;
 		}
+
+		@media only screen and (max-width: 375px) {
+			.body_container {
+				min-height: auto;
+			}
+
+			.header_logo {
+				width: 100px;
+			}
+
+			.header_custom {
+				font-size: 16px;
+			}
+
+			.sub_header_custom {
+				font-size: 14px;
+			}
+
+			.icon_list {
+				display: grid;
+				gap: 10px;
+				margin-top: 20px;
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.gambar_ikon {
+				width: 75px;
+			}
+
+			.btn_custom {
+				padding: 2px 7px;
+				font-size: 10px;
+			}
+		}
 	</style>
 </head>
 

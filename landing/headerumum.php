@@ -376,7 +376,7 @@ $parts = $_SERVER['REQUEST_URI'];
 </div>
 
 <?php if ($_COOKIE['oneid'] != ''): ?>
-	<header class="main-header">
+	<!-- <header class="main-header">
 		<nav class="navbar navbar-static-top">
 			<div class="container">
 				<div class="navbar-header" align="center">
@@ -386,7 +386,7 @@ $parts = $_SERVER['REQUEST_URI'];
 				</div>
 			</div>
 		</nav>
-	</header>
+	</header> -->
 <?php endif; ?>
 
 <script>

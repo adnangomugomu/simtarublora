@@ -566,6 +566,30 @@ $ua = new UserAgent();
 		.box {
 			min-height: 400px;
 		}
+
+		@media only screen and (max-width: 375px) {
+			.custom_header {
+				margin-bottom: 20px;
+			}
+
+			.custom_logo {
+				width: 50px;
+				height: 50px;
+			}
+
+			.judul {
+				font-size: 18px;
+				line-height: 20px;
+			}
+
+			.sub-judul {
+				font-size: 12px;
+			}
+
+			.main-footer {
+				display: none !important;
+			}
+		}
 	</style>
 
 

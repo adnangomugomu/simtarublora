@@ -321,6 +321,39 @@ check_injection();
 			-moz-transform: translateX(500px);
 			transform: translateX(500px);
 		}
+
+		.tombol_utama {
+			z-index: 40;
+			position: absolute;
+			top: 20px;
+			border-radius: 50%;
+			height: 50px;
+			width: 50px;
+		}
+
+		#copyright {
+			position: absolute;
+			bottom: 5px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: white;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border-radius: 3px;
+		}
+
+		@media only screen and (max-width: 375px) {
+			.tombol_utama {
+				top: 100px;
+				transform: translateX(-20px);
+			}
+
+			#copyright {
+				display: none;
+			}
+		}
 	</style>
 
 </head>
@@ -538,12 +571,12 @@ check_injection();
 							<div id="map">
 								<div id="mouse-position" style="bottom:10px; right:20px; z-index:2;position:absolute;color:#FF0000;"></div>
 								<div id="divMainLayer"></div>
-								<button type="button" title="Halaman Utama" class="btn btn-success icon-center btn-circle btn-lg" style="z-index:40;position:absolute;right:290px;top:20px;border-radius:50%;height:50px;width:50px;" onclick="kembalikemenuutama();"><i class="glyphicon glyphicon-home"></i></button>
-								<button type="button" title="Layer" class="btn btn-success icon-center btn-circle btn-lg" style="z-index:40;position:absolute;right:235px;top:20px;border-radius:50%;height:50px;width:50px;" onclick="show_layer();"><i class="glyphicon glyphicon-list-alt"></i></button>
-								<button type="button" title="Base Map" class="btn btn-success icon-center btn-circle btn-lg" style="z-index:40;position:absolute;right:180px;top:20px;border-radius:50%;height:50px;width:50px;" onclick="basemap();"><i class="glyphicon glyphicon-th-large"></i></button>
-								<button type="button" title="Zoom In" class="btn btn-success icon-center btn-circle btn-lg" style="z-index:40;position:absolute;right:125px;top:20px;border-radius:50%;height:50px;width:50px;" id="zoom1"><i class="glyphicon glyphicon-zoom-in"></i></button>
-								<button type="button" title="Zoom Out" class="btn btn-success icon-center btn-circle btn-lg" style="z-index:40;position:absolute;right:70px;top:20px;border-radius:50%;height:50px;width:50px;" id="zoom2"><i class="glyphicon glyphicon-zoom-out"></i></button>
-								<button type="button" title="Cetak Peta" class="btn btn-success icon-center btn-circle btn-lg" style="z-index:40;position:absolute;right:15px;top:20px;border-radius:50%;height:50px;width:50px;" id="export-png"><i class="glyphicon glyphicon-print"></i></button>
+								<button type="button" title="Halaman Utama" class="btn btn-success icon-center btn-circle btn-lg tombol_utama" style="right:290px;" onclick="kembalikemenuutama();"><i class="glyphicon glyphicon-home"></i></button>
+								<button type="button" title="Layer" class="btn btn-success icon-center btn-circle btn-lg tombol_utama" style="right:235px;" onclick="show_layer();"><i class="glyphicon glyphicon-list-alt"></i></button>
+								<button type="button" title="Base Map" class="btn btn-success icon-center btn-circle btn-lg tombol_utama" style="right:180px;" onclick="basemap();"><i class="glyphicon glyphicon-th-large"></i></button>
+								<button type="button" title="Zoom In" class="btn btn-success icon-center btn-circle btn-lg tombol_utama" style="right:125px;" id="zoom1"><i class="glyphicon glyphicon-zoom-in"></i></button>
+								<button type="button" title="Zoom Out" class="btn btn-success icon-center btn-circle btn-lg tombol_utama" style="right:70px;" id="zoom2"><i class="glyphicon glyphicon-zoom-out"></i></button>
+								<button type="button" title="Cetak Peta" class="btn btn-success icon-center btn-circle btn-lg tombol_utama" style="right:15px;" id="export-png"><i class="glyphicon glyphicon-print"></i></button>
 							</div>
 							<div id="loadingstat" style="position: absolute; top: 10; left: 10px; width: 10px; height: 10px; z-index: 100">
 								<!-- /.box-body -->
@@ -557,13 +590,9 @@ check_injection();
 		</div>
 	</div>
 
-	<div style="position: absolute;bottom: 5px;left: 50%;transform: translateX(-50%);background-color: white;padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;border-radius: 3px;">
-		<div class="text-center" style="margin: 0 !important;">Copyright &copy;
-			<script>
-				document.write(new Date().getFullYear());
-			</script>
-			<a href="https://dpupr.blorakab.go.id/" target="_blank">Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Blora</a></strong> All rights
-			reserved.
+	<div id="copyright">
+		<div class="text-center" style="margin: 0 !important;">Copyright &copy; <?= date('Y'); ?>
+			<a href="https://dpupr.blorakab.go.id/" target="_blank">Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Blora</a></strong> All rights reserved.
 		</div>
 	</div>
 
