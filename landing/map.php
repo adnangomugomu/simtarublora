@@ -344,6 +344,30 @@ check_injection();
 			border-radius: 3px;
 		}
 
+		#cek_lokasi {
+			z-index: 40;
+			position: absolute;
+			bottom: 40px;
+			right: 20px;
+			border-radius: 10px;
+			padding: 10px;
+			background-color: white;
+		}
+
+		#cek_lokasi input{
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+
+		#cek_lokasi button{
+			background-color: #00a661 !important;
+			transition: all 0.2s ease-in-out;
+		}
+
+		#cek_lokasi button:hover{
+			background-color: #000000 !important;
+		}
+
 		@media only screen and (max-width: 375px) {
 			.tombol_utama {
 				top: 100px;
@@ -588,6 +612,14 @@ check_injection();
 			</section>
 			<!-- /.content -->
 		</div>
+	</div>
+
+	<div id="cek_lokasi">
+		<input class="rounded" id="latitude" placeholder="Latitude" type="text" size="10" onkeypress="return isNumberKey(event)">
+		<input class="rounded" id="longitude" placeholder="Longitude" type="text" size="10" onkeypress="return isNumberKey(event)">
+		<button type="button" class="btn btn-default" id="lariku" style="background-color:#6699FF;border:none;color:#FFFFFF;font-size:12px;"><b>Ke Lokasi!!</b></button>
+		<button type="button" class="btn btn-default" style="background-color:#6699FF;border:none;color:#FFFFFF;font-size:12px;" onclick="clearku()"><b>Clear</b></button>
+		<button type="button" class="btn btn-default" style="background-color:#6699FF;border:none;color:#FFFFFF;font-size:12px;" onclick="klikku5()"><b>Hapus Marker</b></button>
 	</div>
 
 	<div id="copyright">
