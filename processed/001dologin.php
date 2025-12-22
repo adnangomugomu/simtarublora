@@ -3,8 +3,8 @@ session_start();
 include '../library/config.php';
 check_injection();
 
-$query = "SELECT *,count(id_user) as nomor FROM si_user WHERE true or username='" . mysqli_real_escape_string($link, $_POST['username']) . "' and password='" . encrypt(mysqli_real_escape_string($link, $_POST['password'])) . "' and deleted='0' group by id_user";
-// $query = "SELECT *,count(id_user) as nomor FROM si_user WHERE username='" . mysqli_real_escape_string($link, $_POST['username']) . "' and password='" . encrypt(mysqli_real_escape_string($link, $_POST['password'])) . "' and deleted='0' group by id_user";
+// $query = "SELECT *,count(id_user) as nomor FROM si_user WHERE true or username='" . mysqli_real_escape_string($link, $_POST['username']) . "' and password='" . encrypt(mysqli_real_escape_string($link, $_POST['password'])) . "' and deleted='0' group by id_user";
+$query = "SELECT *,count(id_user) as nomor FROM si_user WHERE username='" . mysqli_real_escape_string($link, $_POST['username']) . "' and password='" . encrypt(mysqli_real_escape_string($link, $_POST['password'])) . "' and deleted='0' group by id_user";
 
 $result = mysqli_query($link, $query);
 $nomor = '';
